@@ -1,0 +1,23 @@
+/* 
+   Name: WinAnim
+   Author: Brook Miles
+   Description: Making an animation in windows
+*/
+
+#include <windows.h>
+
+static char g_szClassName[] = "MyWindowClass";
+static HINSTANCE g_hInst = NULL;
+
+const UINT idTimer1 = 1;
+UINT nTimerDelay = 10;
+
+HBITMAP hbmBall, hbmMask;
+BITMAP bm;
+
+int ballX, ballY;
+int deltaX, deltaY;
+
+int deltaValue = 4;
+
+void EraseBall(HDC hdc)
